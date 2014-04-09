@@ -37,7 +37,7 @@ Add it to your bundles:
 ```php
 $bundles = array(
     ...,
-    new AFM\Bundle\TranslatableRoutePathBundle\AFMTranslatableRoutePathBundle()
+    new \AFM\Bundle\TranslatableRoutePathBundle\AFMTranslatableRoutePathBundle()
 );
 ```
 
@@ -46,8 +46,8 @@ Additionally, you can use this bundle with `JMSI18nRoutingBundle` in which case 
 ```php
 $bundles = array(
     ...
-    \JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
-    new AFM\Bundle\TranslatableRoutePathBundle\AFMTranslatableRoutePathBundle()
+    new \JMS\I18nRoutingBundle\JMSI18nRoutingBundle(),
+    new \AFM\Bundle\TranslatableRoutePathBundle\AFMTranslatableRoutePathBundle()
 );
 ```
 

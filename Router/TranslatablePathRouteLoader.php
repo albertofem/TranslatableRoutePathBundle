@@ -33,9 +33,10 @@ class TranslatablePathRouteLoader
             if(!$route->getOption("translatable"))
                 continue;
 
-            $route->setPath(preg_replace_callback("/\[(.*?)\]/i", function($matches) use ($route)
+            $host = $this;
+            $route->setPath(preg_replace_callback("/\[(.*?)\]/i", function($matches) use ($route, $host)
             {
-                return $this->translator->trans($matches[1], array(), null, $route->getDefault("_locale") ?: null);
+                return $host->translator->trans($matches[1], array(), null, $route->getDefault("_locale") ?: null);
             }, $route->getPath()));
         }
 
