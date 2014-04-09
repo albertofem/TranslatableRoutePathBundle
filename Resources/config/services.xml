@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="afm_route_path_translatable.loader.class">AFM\Bundle\TranslatableRoutePathBundle\Router\TranslatablePathRouteLoader</parameter>
+        <parameter key="afm_route_path_translatable.jms_i18n_loader.class">AFM\Bundle\TranslatableRoutePathBundle\Router\JMSi18nTranslatablePathRouteLoader</parameter>
+        <parameter key="afm_route_path_translatable.router.class">AFM\Bundle\TranslatableRoutePathBundle\Router\TranslatablePathRouter</parameter>
+    </parameters>
+
+    <services>
+        <service id="afm_route_path_translatable.loader" class="%afm_route_path_translatable.loader.class%">
+            <argument type="service" id="translator" />
+        </service>
+
+        <service id="afm_route_path_translatable.jms_i18n_loader" class="%afm_route_path_translatable.jms_i18n_loader.class%">
+            <argument type="service" id="jms_i18n_routing.route_exclusion_strategy" on-invalid="ignore" />
+            <argument type="service" id="jms_i18n_routing.pattern_generation_strategy" on-invalid="ignore" />
+            <call method="setTranslatablePathRouteLoader">
+                <argument type="service" id="afm_route_path_translatable.loader" />
+            </call>
+        </service>
+
+        <service id="afm_route_path_translatable.router" class="%afm_route_path_translatable.router.class%" parent="router.default" public="false">
+            <call method="setTranslatablePathRouteLoader">
+                <argument type="service" id="afm_route_path_translatable.loader" />
+            </call>
+        </service>
+
+    </services>
+</container>

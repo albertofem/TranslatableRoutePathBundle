@@ -1,0 +1,28 @@
+{
+    "name": "albertofem/translatableroutepath-bundle",
+    "description": "JpnForPhp Symfony2 bundle integration",
+    "keywords": ["route", "translatable", "path", "symfony", "bundle"],
+    "homepage": "http://albertofem.com",
+    "require": {
+        "symfony/symfony": "2.4.*"
+    },
+    "require-dev": {
+        "jms/i18n-routing-bundle": "1.1.*",
+        "sensio/framework-extra-bundle": "~3.0",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "suggest": {
+        "jms/i18n-routing-bundle": "Support JMSI18nRoutingBundle route path translations"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alberto Fernández",
+            "email": "albertofem@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "AFM\\Bundle\\TranslatableRoutePathBundle": "" }
+    },
+    "target-dir": "AFM/Bundle/TranslatableRoutePathBundle"
+}

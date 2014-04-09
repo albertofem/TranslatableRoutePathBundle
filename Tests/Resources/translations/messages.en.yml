@@ -1,0 +1,8 @@
+route:
+    annotation:
+        sup: sup-route
+        sub: sub-route
+    normal:
+        test: my-test-route-path
+    unit:
+        test: example-path

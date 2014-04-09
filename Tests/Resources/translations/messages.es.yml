@@ -1,0 +1,8 @@
+route:
+    annotation:
+        sup: ruta-superior
+        sub: ruta-inferior
+    normal:
+        test: mi-path-de-ejemplo
+    unit:
+        test: path-de-ejemplo

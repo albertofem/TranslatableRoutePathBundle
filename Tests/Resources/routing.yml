@@ -1,0 +1,13 @@
+test_annotation:
+    resource: "@TranslatableRoutePathTestBundle/Controller/"
+    type: annotation
+
+normal_test_route:
+    path: /test/[route.normal.test]
+    defaults: { _controller: TranslatableRoutePathTestBundle:ExampleNormal:test }
+    options: { translatable: true }
+
+normal_test_route_force_language:
+    path: /test/[route.normal.test]
+    defaults: { _controller: TranslatableRoutePathTestBundle:ExampleNormal:test, _locale: en }
+    options: { translatable: true }

@@ -1,0 +1,5 @@
+vendor/
+phpunit.xml
+build/
+Tests/cache
+Tests/logs

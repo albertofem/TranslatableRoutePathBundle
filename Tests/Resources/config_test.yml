@@ -1,0 +1,6 @@
+framework:
+    secret: test
+    test: ~
+    translator: { fallback: es }
+    router:
+        resource: "%kernel.root_dir%/Resources/routing.yml"
