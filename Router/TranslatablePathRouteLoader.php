@@ -36,7 +36,7 @@ class TranslatablePathRouteLoader
             $translator = $this->translator;
             $route->setPath(preg_replace_callback("/\[(.*?)\]/i", function($matches) use ($route, $translator)
             {
-                return $translator->translator->trans($matches[1], array(), null, $route->getDefault("_locale") ?: null);
+                return $translator->trans($matches[1], array(), null, $route->getDefault("_locale") ?: null);
             }, $route->getPath()));
         }
 
