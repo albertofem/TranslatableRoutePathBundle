@@ -73,13 +73,13 @@ my_translatable_route:
     options: { translatable: true }
 ```
 
-Use the syntax `[...]` to referer to translations in your routes paths. You can use this notation in annotations/yaml/PHP indistintively.
+Use the syntax `[...]` to referer to translations in your routes paths. You can use this syntax in annotations/yaml/PHP indistintively.
 
-1. Integration with *JMSI18nRoutingBundle*
+### Integration with **JMSI18nRoutingBundle**
 
-If your are using this great bundle, routes will be automatically translated to are the locales set in the configuration.
+If your are using this great bundle, routes will be automatically translated to all the locales set in the configuration.
 
-2. Integration with Symfony core Router
+### Integration with Symfony core Router
 
 When using Symfony core router, all routes are translated into the default locale. If you need a Route to be translated in another language, you must specify the `_locale` default parameter:
 
