@@ -1,7 +1,7 @@
 TranslatableRoutePathBundle
 ===============
 
-[![build status](https://secure.travis-ci.org/albertofem/TranslatableRoutePathBundle.png)](http://travis-ci.org/albertofem/TranslatableRoutePathBundle)
+[![build status](https://secure.travis-ci.org/albertofem/TranslatableRoutePathBundle.png)](http://travis-ci.org/albertofem/TranslatableRoutePathBundle) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/albertofem/TranslatableRoutePathBundle/badges/quality-score.png?s=aa0a33f6a748865dba19424e56bf57df90f98e94)](https://scrutinizer-ci.com/g/albertofem/TranslatableRoutePathBundle/)
 
 Allows using translations in routes paths:
 
