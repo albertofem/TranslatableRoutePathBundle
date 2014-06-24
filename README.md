@@ -51,6 +51,10 @@ $bundles = array(
 );
 ```
 
+If you need to run the tests:
+
+    ./vendor/bin/phpunit
+
 Usage
 -----
 
