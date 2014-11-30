@@ -4,7 +4,7 @@
     "keywords": ["route", "translatable", "path", "symfony", "bundle"],
     "homepage": "http://albertofem.com",
     "require": {
-        "symfony/symfony": "2.5.*"
+        "symfony/symfony": "~2.5"
     },
     "require-dev": {
         "jms/i18n-routing-bundle": "1.1.*",
